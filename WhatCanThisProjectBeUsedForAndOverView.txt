@@ -1,0 +1,7 @@
+This project is made of background images that expand when clicked on. 
+
+It uses Flexbox, CSS transitions and JavaScript
+
+This could be converted to be used in (for example) the following ways
+
+- 
