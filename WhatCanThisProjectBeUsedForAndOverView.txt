@@ -1,7 +1,9 @@
-This project is made of background images that expand when clicked on. 
+This project is a quiz app consiisting of 3 questions with answers in a JavaScript array. 
+
+The User is presented with their results once they have submitted all questions
 
 It uses Flexbox, CSS transitions and JavaScript
 
 This could be converted to be used in (for example) the following ways
 
-- 
+- a little quiz app
