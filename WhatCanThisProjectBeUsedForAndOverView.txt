@@ -6,4 +6,4 @@ It uses Flexbox, CSS transitions and JavaScript
 
 This could be converted to be used in (for example) the following ways
 
-- a little quiz app
+- a little quiz app for on a website

@@ -1,6 +1,6 @@
 const quizData = [
     {
-        question: "What colours is the flag of the United Nations?",
+        question: "Which colours are in the flag of the United Nations?",
         a: "Black and white",
         b: "Green and blue",
         c: " Green and white",
@@ -16,7 +16,7 @@ const quizData = [
         correct: "b",
     },
     {
-        question: "Which language has the most native speakers?",
+        question: "Which language has the most native speakers worldwide?",
         a: "Portuguese",
         b: "English",
         c: "Spanish",
@@ -24,7 +24,7 @@ const quizData = [
         correct: "c",
     },
     {
-        question: "What country drinks the most coffee?",
+        question: "Which country drinks the most coffee?",
         a: "Brazil",
         b: "China",
         c: "Finland",
@@ -56,7 +56,7 @@ const quizData = [
         correct: "c",
     },
     {
-        question: "How many consonanats are in the English alaphabet?",
+        question: "How many consonants are in the English alaphabet?",
         a: "19",
         b: "20",
         c: "21",
@@ -64,7 +64,7 @@ const quizData = [
         correct: "c",
     },
     {
-        question: "Which Disney Princess called Gus and Jaq friends?",
+        question: "Which Disney Princess has friends called Gus and Jaq?",
         a: "Rapunzel",
         b: "Snow White",
         c: "Cinderella",
