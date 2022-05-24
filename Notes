@@ -1,9 +1,0 @@
-NOTE
-****************
-
-This project doesn't work. 
-
-It is returning an error
-"Uncaught TypeError: Cannot script.js:108 Uncaught TypeError: Cannot set properties of null (setting 'innerText') at loadQuix (script.js:108:22)
-at script.js:100:1"
-

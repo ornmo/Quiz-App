@@ -5,7 +5,7 @@ const quizData = [
         b: "Green and blue",
         c: " Green and white",
         d: "Blue and white",
-        correct: "Blue and white",
+        correct: "d",
     },
     {
         question: "How many faces does a Dodecahedron have?",
@@ -13,15 +13,15 @@ const quizData = [
         b: "12",
         c: "14",
         d: "16",
-        correct: "12",
+        correct: "b",
     },
     {
-        question: "Which language has the more native speakers?",
+        question: "Which language has the most native speakers?",
         a: "Portuguese",
         b: "English",
         c: "Spanish",
         d: "French",
-        correct: "Spanish",
+        correct: "c",
     },
     {
         question: "What country drinks the most coffee?",
@@ -29,69 +29,66 @@ const quizData = [
         b: "China",
         c: "Finland",
         d: "United States",
-        correct: "",
+        correct: "c",
     },
-    // {
-    //     question: "How many bones do we have in an ear?",
-    //     a: "3",
-    //     b: "4",
-    //     c: "5",
-    //     d: "6",
-    //     correct: "3",
-    // },
-    // {
-    //     question: "How many films have Al Pacino and Robert De Niro appeared in together?",
-    //     a: "Two",
-    //     b: "Four",
-    //     c: "Six",
-    //     d: "Eight",
-    //     correct: "Four",
-    // },
-    // {
-    //     question: "What is a group of crows called?",
-    //     a: "A school",
-    //     b: "A gang",
-    //     c: "A murder",
-    //     d: "A barrel",
-    //     correct: "A murder",
-    // },
-    // {
-    //     question: "What's longer, a nautical mile or a mile?",
-    //     a: "Nautical mile",
-    //     b: "Mile",
-    //     correct: "Nautical mile",
-    // },
-    // {
-    //     question: "Which Disney Princess called Gus and Jaq friends?",
-    //     a: "Rapunzel",
-    //     b: "Snow White",
-    //     c: "Cinderella",
-    //     d: "Belle",
-    //     correct: "Cinderella",
-    // },
-    // {
-    //     question: "What are the five colours of the Olympic rings?",
-    //     a: "Red, blue, yellow, orange, green",
-    //     b: "Blue, yellow, black, green and red",
-    //     c: "Green, blue, white, yellow, red",
-    //     d: "Red, blue, purple, green, yellow",
-    //     correct: "Blue, yellow, black, green and red",
-    // },
+    {
+        question: "How many bones does an ear have?",
+        a: "3",
+        b: "4",
+        c: "5",
+        d: "6",
+        correct: "a",
+    },
+    {
+        question: "How many films have Al Pacino and Robert De Niro appeared in together?",
+        a: "Two",
+        b: "Four",
+        c: "Six",
+        d: "Eight",
+        correct: "b",
+    },
+    {
+        question: "What is a group of crows called?",
+        a: "A school",
+        b: "A gang",
+        c: "A murder",
+        d: "A barrel",
+        correct: "c",
+    },
+    {
+        question: "How many consonanats are in the English alaphabet?",
+        a: "19",
+        b: "20",
+        c: "21",
+        d: "22",
+        correct: "c",
+    },
+    {
+        question: "Which Disney Princess called Gus and Jaq friends?",
+        a: "Rapunzel",
+        b: "Snow White",
+        c: "Cinderella",
+        d: "Belle",
+        correct: "c",
+    },
+    {
+        question: "What are the five colours of the Olympic rings?",
+        a: "Red, blue, yellow, orange, green",
+        b: "Blue, yellow, black, green and red",
+        c: "Green, blue, white, yellow, red",
+        d: "Red, blue, purple, green, yellow",
+        correct: "b",
+    },
+
 ];
 
 const quiz = document.getElementById('quiz')
 const answerEls = document.querySelectorAll('.answer')
 const questionEl = document.getElementById('question')
-const a_text = document.getElementById('a__text')
-const b_text = document.getElementById('b__text')
-const c_text = document.getElementById('c__text')
-const d_text = document.getElementById('d__text')
-// const e_text = document.getElementById('e__text')
-// const f_text = document.getElementById('f__text')
-// const g_text = document.getElementById('g__text')
-// const h_text = document.getElementById('h__text')
-// const i_text = document.getElementById('i__text')
-// const j_text = document.getElementById('j__text')
+const a_text = document.getElementById('a_text')
+const b_text = document.getElementById('b_text')
+const c_text = document.getElementById('c_text')
+const d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
 
 let currentQuiz = 0
@@ -109,37 +106,9 @@ function loadQuiz() {
     b_text.innerText = currentQuizData.b
     c_text.innerText = currentQuizData.c
     d_text.innerText = currentQuizData.d
-    // e_text.innerText = currentQuizData.e
-    // f_text.innerText = currentQuizData.f
-    // g_text.innerText = currentQuizData.g
-    // h_text.innerText = currentQuizData.h
-    // i_text.innerText = currentQuizData.i
-    // j_text.innerText = currentQuizData.j
 }
 
-
-submitBtn.addEventListener('click', () => {
-    const answer = getSelected()
-    
-    if(answer) {
-        if(answer === quizData[currentQuiz].correct) {
-            score++
-        }
-
-        currentQuiz++
-
-        if(currentQuiz < quizData.length) {
-            loadQuiz
-        } else {
-            quiz.innerHTML = `
-            <h2> You answered ${score}/${quizData.length} questions correclty!</h2>
-            <button onclick="location.reload()">Relaod</button>
-            `
-        }
-    }
-})
-
-function  deselectAnswers() {
+function deselectAnswers() {
     answerEls.forEach(answerEl => answerEl.checked = false)
 }
 
@@ -154,3 +123,24 @@ function getSelected() {
 
     return answer
 }
+
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected()
+    
+    if(answer) {
+        if(answer === quizData[currentQuiz].correct) {
+            score++
+        }
+
+        currentQuiz++
+
+        if(currentQuiz < quizData.length) {
+            loadQuiz()
+        } else {
+            quiz.innerHTML = `
+                <h2>You answered ${score}/${quizData.length} questions correctly</h2>
+                <button onclick="location.reload()">Reload</button>
+            `
+        }
+    }
+})
